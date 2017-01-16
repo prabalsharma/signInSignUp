@@ -6,34 +6,21 @@ from utils import getSigninWithEmailForm
 
 class TestSignInWithEmailForm(unittest.TestCase):
 
-    # def setUp(self):
-    #     self.driver = webdriver.Firefox()
-
     def test_signInWithInvalidCreds(self):
-        #driver = self.driver
         driver = webdriver.Firefox()
         simplepopup = getSigninWithEmailForm.getSigninWithEmailForm(driver)
 
-
-        #simplepopup = self.simplepopup
-        #print self.simplepopup.text
         bHSignIn = simplepopup.find_element_by_xpath(".//div[@class='bHSignIn']")
-        #self.assertIn("Invalid login or password", bHSignIn.find_element_by_class_name('error-message message ng-binding'))
-        #self.assertIn("Invalid login or password", simplepopup.text)
         simpleauth =  bHSignIn.find_element_by_xpath(".//div[@class='simpleauth']")
         signinForm = simpleauth.find_element_by_xpath(".//form[@class='signin ng-pristine ng-valid']")
         emailForm = signinForm.find_element_by_xpath(".//input[@class='email textbox']")
         passwordForm = signinForm.find_element_by_xpath(".//input[@class='password textbox']")
-        #print simplepopup.text
-        #print "*******************************************"
         emailForm.send_keys("YourUsername@gmail.com")
         passwordForm.send_keys("Pa55worD")
         time.sleep(3)
         signInButton = signinForm.find_element_by_xpath(".//button[@class='green-button ladda-button signin-button ng-binding' and text() = 'Sign in']")
         signInButton.click()
         time.sleep(3)
-        #self.assertIn("Invalid login or password", simplepopup.text)
-        print simplepopup.text
         assert "Invalid login or password" in simplepopup.text
         driver.quit()
 
@@ -41,26 +28,17 @@ class TestSignInWithEmailForm(unittest.TestCase):
         driver = webdriver.Firefox()
         simplepopup = getSigninWithEmailForm.getSigninWithEmailForm(driver)
 
-
-        #simplepopup = self.simplepopup
-        #print self.simplepopup.text
         bHSignIn = simplepopup.find_element_by_xpath(".//div[@class='bHSignIn']")
-        #self.assertIn("Invalid login or password", bHSignIn.find_element_by_class_name('error-message message ng-binding'))
-        #self.assertIn("Invalid login or password", simplepopup.text)
         simpleauth =  bHSignIn.find_element_by_xpath(".//div[@class='simpleauth']")
         signinForm = simpleauth.find_element_by_xpath(".//form[@class='signin ng-pristine ng-valid']")
         emailForm = signinForm.find_element_by_xpath(".//input[@class='email textbox']")
         passwordForm = signinForm.find_element_by_xpath(".//input[@class='password textbox']")
-        #print simplepopup.text
-        #print "*******************************************"        
         emailForm.send_keys("YourUsername")
         passwordForm.send_keys("Pa55worD")
         time.sleep(3)
         signInButton = signinForm.find_element_by_xpath(".//button[@class='green-button ladda-button signin-button ng-binding' and text() = 'Sign in']")
         signInButton.click()
         time.sleep(3)
-        #self.assertIn("Invalid login or password", simplepopup.text)
-        print simplepopup.text
         assert "This value should be a valid email." in simplepopup.text
         driver.quit()
 
@@ -68,28 +46,17 @@ class TestSignInWithEmailForm(unittest.TestCase):
         driver = webdriver.Firefox()
         simplepopup = getSigninWithEmailForm.getSigninWithEmailForm(driver)
 
-
-        #simplepopup = self.simplepopup
-        #print self.simplepopup.text
         bHSignIn = simplepopup.find_element_by_xpath(".//div[@class='bHSignIn']")
-        #self.assertIn("Invalid login or password", bHSignIn.find_element_by_class_name('error-message message ng-binding'))
-        #self.assertIn("Invalid login or password", simplepopup.text)
         simpleauth =  bHSignIn.find_element_by_xpath(".//div[@class='simpleauth']")
         signinForm = simpleauth.find_element_by_xpath(".//form[@class='signin ng-pristine ng-valid']")
         emailForm = signinForm.find_element_by_xpath(".//input[@class='email textbox']")
         passwordForm = signinForm.find_element_by_xpath(".//input[@class='password textbox']")
-        #print simplepopup.text
-        #print "*******************************************"        
         emailForm.send_keys("signInSignUp@gmail.com")
         passwordForm.send_keys("signInSignUp")
         time.sleep(3)
         signInButton = signinForm.find_element_by_xpath(".//button[@class='green-button ladda-button signin-button ng-binding' and text() = 'Sign in']")
         signInButton.click()
         time.sleep(3)
-        #print signInButton.text
-        #print driver.page_source
-        # #self.assertIn("Invalid login or password", simplepopup.text)
-        # print simplepopup.text
         assert "Looks pretty empty, huh?" in driver.page_source
 
         """Sign Out"""
@@ -264,30 +231,6 @@ class TestSignInWithEmailForm(unittest.TestCase):
         "This value should be the same." in simplepopup.text
 
         driver.quit()
-        #simplepopup.find_element_by_class_name('error-message message ng-binding'))
-        #username = signInWithEmail.find_element_by_class_name("email textbox")
-        # username = driver.find_element_by_xpath("//input[@class='email textbox']")
-        # print username
-        # username = signInWithEmail.find_element_by_xpath(".//input[@class='email textbox']")
-        # #print username.get_attribute('innerHTML')
-        # print username
-        # password = signInWithEmail.find_element_by_xpath("//input[@class='password textbox']")
-        #username.send_keys("YourUsername")
-        # password.send_keys("Pa55worD")
-        # signIn = signInWithEmail.find_element_by_xpath("//button[@class='green-button ladda-button signin-button ng-binding' and text() = 'Sign in']")
-        # signIn.click()
-        # time.sleep(5)
-        #self.assertIn("Sign in with email", driver.page_source)
-        # self.assertIn("Python", driver.title)
-        # elem = driver.find_element_by_name("q")
-        # elem.send_keys("pycon")
-        # elem.send_keys(Keys.RETURN)
-        # assert "No results found." not in driver.page_source
 
-    # def tearDown(self):
-    #     self.driver.quit()
-
-#if __name__ == "__main__":
-    #unittest.main()
 suite = unittest.TestLoader().loadTestsFromTestCase(TestSignInWithEmailForm)
 unittest.TextTestRunner(verbosity=2).run(suite)
