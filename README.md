@@ -21,6 +21,9 @@ pip install --upgrade pip
 sudo pip install selenium 
 (selenium 3.0.2) 
 
+Install pyyaml:
+sudo pip install pyyaml
+
 Install geckodriver:
 wget https://github.com/mozilla/geckodriver/releases/download/v0.13.0/geckodriver-v0.13.0-linux64.tar.gz Extract it and copy the driver to /usr/local/bin and make it executable (chmod +x geckodriver)
 
