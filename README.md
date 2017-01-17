@@ -2,7 +2,8 @@
 ###Preconditions:
 
 1. Ubuntu 14.04.5/ 16.04.1 Desktop version
-```($ lsb_release -a
+```
+($ lsb_release -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 14.04.5 LTS
@@ -12,7 +13,8 @@ Codename:	trusty
 ```
 
 2. Python 2.7.6 / 2.7.12
-```($ python --version
+```
+($ python --version
 Python 2.7.6)
 sudo apt-get install python
 ```
