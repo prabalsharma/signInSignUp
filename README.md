@@ -47,6 +47,6 @@ sudo cp geckodriver /usr/local/bin/
 
 ###Rerun the tests:
 
-Replace all "dsfujhiwqjeoijpwqepo@gmail.com" with another valid email in formsFiller.yaml
+Replace all "signInSignUp123@gmail.com" with another valid email in formsFiller.yaml
 
 **Note:** test_signInWithValidCreds - Sign-in with valid credentials is using email: signInSignUp@gmail.com and requires it to be a new account with everything empty as it looks for message "Looks pretty empty, huh?" for positive test. So if you change the value please do it with a new account with everything empty.
