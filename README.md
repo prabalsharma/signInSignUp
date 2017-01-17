@@ -1,7 +1,7 @@
 
 ###Preconditions:
 
-1. Ubuntu 14.04.5/ 16.04.1 Desktop version
+#####1.Ubuntu 14.04.5/ 16.04.1 Desktop version
 ```
 ($ lsb_release -a
 No LSB modules are available.
@@ -12,23 +12,23 @@ Codename:	trusty
 )
 ```
 
-2. Python 2.7.6 / 2.7.12
+#####2.Python 2.7.6 / 2.7.12
 ```
 ($ python --version
 Python 2.7.6)
 ```
 `sudo apt-get install python`
 
-3. Install selenium:
+#####3.Install selenium:
 `sudo apt install python-pip`
 `pip install --upgrade pip`
 `sudo pip install selenium`
 (selenium 3.0.2) 
 
-4. Install pyyaml:
+#####4.Install pyyaml:
 `sudo pip install pyyaml`
 
-5. Install geckodriver:
+#####5.Install geckodriver:
 `wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz` Extract it and copy the driver to /usr/local/bin and make it executable (chmod +x geckodriver)
 ```
 tar -xvzf geckodriver-v0.11.1-linux64.tar.gz
@@ -37,9 +37,9 @@ chmod +x geckodriver
 sudo cp geckodriver /usr/local/bin/
 ```
 
-6. Firfox installed
+#####6.Firfox installed
 
-5. Signed out for www.news360.com on Firefox
+#####5.Signed out for www.news360.com on Firefox
 
 ###Run tests:
 
