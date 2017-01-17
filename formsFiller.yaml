@@ -1,0 +1,37 @@
+---
+test_signInWithInvalidCreds:
+    email: YourUsername@gmail.com
+    password: Pa55worD
+test_signInWithInvalidEmailFormat:
+    email: YourUsername
+    password: Pa55worD
+test_signInWithValidCreds:
+    email: signInSignUp@gmail.com
+    password: signInSignUp
+test_signUpWithValidCreds:
+    email: dsfujhiwqjeoijpwqepo@gmail.com
+    password: signInSignUp
+    confirmPass: signInSignUp
+test_signUpWithInvalidEmail:
+    email: dsfujhiwqjeoijpwqepo
+    password: signInSignUp
+    confirmPass: signInSignUp
+test_signUpWithNoConfirmPass:
+    email: dsfujhiwqjeoijpwqepo@gmail.com
+    password: signInSignUp
+test_signUpWithDiffConfirmPass:
+    email: dsfujhiwqjeoijpwqepo@gmail.com
+    password: signInSignUp
+    confirmPass: different
+test_signUpWithPassLessThanSix:
+    email: dsfujhiwqjeoijpwqepo@gmail.com
+    password: 123
+    confirmPass: 123
+test_signUpWithAllWrongFormat:
+    email: dsfujhiwqjeoijpwqepo
+    password: 123
+    confirmPass: 1
+test_signUpWithExistingAccount:
+    email: signInSignUp@gmail.com
+    password: signInSignUp
+    confirmPass: signInSignUp
