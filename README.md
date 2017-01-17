@@ -16,8 +16,8 @@ Codename:	trusty
 ```
 ($ python --version
 Python 2.7.6)
-sudo apt-get install python
 ```
+`sudo apt-get install python`
 
 3. Install selenium:
 `sudo apt install python-pip`
@@ -29,11 +29,13 @@ sudo apt-get install python
 `sudo pip install pyyaml`
 
 5. Install geckodriver:
-`wget https://github.com/mozilla/geckodriver/releases/download/v0.13.0/geckodriver-v0.13.0-linux64.tar.gz` Extract it and copy the driver to /usr/local/bin and make it executable (chmod +x geckodriver)
-```tar -xvzf geckodriver-v0.11.1-linux64.tar.gz
+`wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz` Extract it and copy the driver to /usr/local/bin and make it executable (chmod +x geckodriver)
+```
+tar -xvzf geckodriver-v0.11.1-linux64.tar.gz
 rm geckodriver-v0.11.1-linux64.tar.gz
 chmod +x geckodriver
-sudo cp geckodriver /usr/local/bin/```
+sudo cp geckodriver /usr/local/bin/
+```
 
 6. Firfox installed
 
