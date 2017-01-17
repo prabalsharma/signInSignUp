@@ -1,7 +1,7 @@
 
 Preconditions:
 
-Ubuntu 14 Desktop version
+Ubuntu 14.04.5/ 16.04.1 Desktop version
 ($ lsb_release -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
@@ -10,7 +10,7 @@ Release:	14.04
 Codename:	trusty
 )
 
-Python 2.7.x 
+Python 2.7.6 / 2.7.12
 ($ python --version
 Python 2.7.6)
 sudo apt-get install python
