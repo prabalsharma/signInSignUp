@@ -28,6 +28,10 @@ sudo apt-get install python
 
 5. Install geckodriver:
 `wget https://github.com/mozilla/geckodriver/releases/download/v0.13.0/geckodriver-v0.13.0-linux64.tar.gz` Extract it and copy the driver to /usr/local/bin and make it executable (chmod +x geckodriver)
+```tar -xvzf geckodriver-v0.11.1-linux64.tar.gz
+rm geckodriver-v0.11.1-linux64.tar.gz
+chmod +x geckodriver
+sudo cp geckodriver /usr/local/bin/```
 
 6. Firfox installed
 
