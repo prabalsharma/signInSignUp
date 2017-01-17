@@ -39,7 +39,7 @@ sudo cp geckodriver /usr/local/bin/
 
 #####6.Firfox installed
 
-#####5.Signed out for www.news360.com on Firefox
+#####7.Signed out for www.news360.com on Firefox
 
 ###Run tests:
 
